@@ -10,7 +10,7 @@ public class day2 {
         System.out.print("请输人每天学习小时数：");
         double hoursPerDay=scanner.nextDouble();
         double hoursPerWeek=hoursPerDay*7;
-        int minutesPerWeek=(int)hoursPerWeek*60;
+        int minutesPerWeek=(int)(hoursPerWeek*60);
         boolean isQualified=hoursPerWeek>=10;
         System.out.print("请输入每周目标学习时长小时数为：");
         double aimHours=scanner.nextDouble();
