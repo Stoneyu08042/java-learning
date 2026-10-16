@@ -7,7 +7,7 @@ public class day2 {
         Scanner scanner=new Scanner(System.in);
         System.out.print("请输入姓名：");
         String name=scanner.nextLine();
-        System.out.print("请输人每天学习小时数：");
+        System.out.print("请输入每天学习小时数：");
         double hoursPerDay=scanner.nextDouble();
         double hoursPerWeek=hoursPerDay*7;
         int minutesPerWeek=(int)(hoursPerWeek*60);
