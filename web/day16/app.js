@@ -319,6 +319,12 @@ function handleTableClick(event) {
         // 使用 students.find(...) 找到 id 相同的学生。
         // 找到后调用 startEditing(student)。
         const student = students.find((student) => student.id === id);
+
+        if (!student) {
+            setFormMessage("没有找到要编辑的学生");
+            return;
+        }
+
         startEditing(student);
 
         return;
@@ -354,3 +360,15 @@ sortScore.addEventListener("change", renderStudents);
 cancelEditButton.addEventListener("click", exitEditMode);
 
 renderStudents();
+
+// filter：找所有，返回数组
+// find：找第一个，返回对象
+// findIndex：找第一个，返回下标
+//sort()会改变原有数组的排序，所以用之前会复制一个新数组
+
+// 原始数据和筛选后的显示数据要分开
+// students：原始数据，新增、编辑、删除都修改它
+// visibleStudents：筛选、排序后的显示数据
+// students 保持不变
+// visibleStudents 根据条件临时生成
+// 表格渲染 visibleStudents
