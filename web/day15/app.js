@@ -231,3 +231,10 @@ studentForm.addEventListener("submit", handleFormSubmit);
 tableBody.addEventListener("click", handleTableClick);
 
 renderStudents();
+
+// defer 的作用是：
+// 浏览器先并行下载 app.js，等 HTML 解析完成后再执行脚本。
+// 事件委托是：
+// 把点击事件绑定在父元素 tbody 上，通过事件冒泡统一处理所有删除按钮。
+// preventDefault 阻止表单刷新页面
+// 刷新后数据消失，是因为数组只在内存中
