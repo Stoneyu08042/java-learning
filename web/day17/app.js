@@ -64,6 +64,10 @@ function loadStudents() {
     }
 }
 
+// localStorage 只能保存字符串
+// JSON.stringify 把数组转成字符串
+// JSON.parse 把字符串转回数组
+
 // 把当前学生数组转换成 JSON 并写入 localStorage。
 function saveStudents() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(students));

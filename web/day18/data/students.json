@@ -1,0 +1,37 @@
+[
+    {
+        "id": 1,
+        "name": "张三",
+        "className": "一班",
+        "javaScore": 88.5,
+        "createdAt": "2026-10-01 09:00"
+    },
+    {
+        "id": 2,
+        "name": "李四",
+        "className": "二班",
+        "javaScore": 72,
+        "createdAt": "2026-10-02 10:15"
+    },
+    {
+        "id": 3,
+        "name": "石头",
+        "className": "一班",
+        "javaScore": 95,
+        "createdAt": "2026-10-03 14:30"
+    },
+    {
+        "id": 4,
+        "name": "赵六",
+        "className": "三班",
+        "javaScore": 61.5,
+        "createdAt": "2026-10-04 08:45"
+    },
+    {
+        "id": 5,
+        "name": "孙七",
+        "className": "二班",
+        "javaScore": 79,
+        "createdAt": "2026-10-05 16:20"
+    }
+]
