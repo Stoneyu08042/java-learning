@@ -3,8 +3,10 @@ package org.example.studentapi.student;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -59,5 +61,29 @@ public class StudentController {
                         "2026-10-05 16:20"
                 )
         );
+    }
+    @GetMapping("/students/{id}")
+    public ResponseEntity<Student> getStudentById(
+            @PathVariable long id
+    ) {
+        Student student = findStudentById(id);
+
+        if (student == null) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(student);
+    }
+
+    private Student findStudentById(long id) {
+        for (Student student : getStudents()) {
+            // TODO:
+            // 如果 student.getId() 等于 id，就返回这个 student。
+            if (student.getId()==id){
+                return student;
+            }
+        }
+
+        return null;
     }
 }
